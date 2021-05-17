@@ -10,7 +10,7 @@ const SurveySummary = (props) => {
   const userEmail = props.email === "" ? "Not provided" : email;
   return (
     <div>
-      <div className="title"> Summary </div>
+      <div className="title"> Summary : </div>
       <div className="summaryTable">
         <div>Name : {userName}</div>
         <div>Email : {userEmail}</div>

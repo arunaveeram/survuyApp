@@ -38,9 +38,7 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-red-light: rgb(255, 0, 0);
   --clr-black: #222;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
@@ -69,7 +67,6 @@ Global Styles
 h1,
 h2 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
@@ -77,62 +74,23 @@ h2 {
 h1 {
   font-size: 3rem;
 }
-body {
-  font-family: var(--ff-primary);
-  color: var(--clr-black);
-}
+
 main {
   min-height: 100vh;
   display: grid;
   place-items: center;
 }
-.modal {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: var(--clr-black);
-}
-
-.modal-main {
-  position: fixed;
-  background: var(--clr-white);
-  width: 80%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  padding: 1.5rem;
-  transform: translate(-50%, -50%);
-}
-
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-family: var(--ff-primary);
-}
 
 /* Set a style for all buttons */
 button {
   font-family: var(--ff-primary);
-  text-transform: uppercase;
   background: transparent;
   color: var(--clr-black);
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 700;
   transition: var(--transition);
-  border: 2px solid var(--clr-black);
+  border: 1px solid var(--clr-grey-9);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
@@ -146,17 +104,54 @@ button {
 button:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+  border: 1px solid var(--clr-black);
+}
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr-black);
+}
+
+.modal-main {
+  position: fixed;
+  background: var(--clr-white);
+  padding: 1.5rem;
+  width: 80vw;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  display: inline-block;
+  border: 2px solid var(--clr-grey-9);
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+  font-size: 1rem;
 }
 
 select {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem 0;
   display: inline-block;
-  border: 3px solid #ccc;
+  border: 1px solid var(--clr-grey-9);
   box-sizing: border-box;
   font-family: var(--ff-primary);
   font-size: 1rem;
+  border: 2px solid var(--clr-grey-9);
 }
 
 .left-btn {
@@ -179,11 +174,11 @@ select {
   font-family: var(--ff-primary);
 }
 .summaryTable {
-  border: 1px solid #000;
+  border: 2px solid var(--clr-grey-9);
   padding: 0.75rem;
 }
 
 .errorMessage {
-  color: red;
+  color: var(--clr-red-light);
   text-align: center;
 }

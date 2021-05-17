@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ErrorMessage } from "./input";
+import { Button, ErrorMessage } from "./common";
 
 const genderValues = [
   { id: 1, value: "Male" },

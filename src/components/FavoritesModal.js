@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, ErrorMessage, Input } from "./input";
+import { Button, ErrorMessage, Input } from "./common";
 
 const colorsData = [
   { id: 1, value: "Red" },

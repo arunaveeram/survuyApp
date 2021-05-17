@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "./input";
+import { Button } from "./common";
 
 const SurveySummary = (props) => {
   console.log("colors", props.gender);

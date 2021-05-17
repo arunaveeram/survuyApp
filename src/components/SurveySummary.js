@@ -20,8 +20,12 @@ const SurveySummary = (props) => {
         <div>Colors : {props.colors.toString().split(",").join(", ")}</div>
       </div>
 
-      <Button title={"Previous"} onClick={props.handlePrevious} />
-      <Button title={"Submit"} onClick={props.show} />
+      <Button
+        title={"Previous"}
+        onClick={props.handlePrevious}
+        className="left-btn"
+      />
+      <Button title={"Submit"} onClick={props.show} className="right-btn" />
     </div>
   );
 };

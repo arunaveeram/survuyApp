@@ -47,8 +47,12 @@ const Details = (props) => (
     <Age handleAge={props.handleAge} age={props.age} />
     <Gender handleGender={props.handleGender} gender={props.gender} />
     <ErrorMessage message={props.errorMessage} />
-    <Button title={"Next"} onClick={props.handleNext} />
-    <Button title={"Previous"} onClick={props.handlePrevious} />
+    <Button
+      title={"Previous"}
+      onClick={props.handlePrevious}
+      className="left-btn"
+    />
+    <Button title={"Next"} onClick={props.handleNext} className="right-btn" />
   </div>
 );
 

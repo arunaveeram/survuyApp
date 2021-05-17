@@ -77,7 +77,10 @@ h2 {
 h1 {
   font-size: 3rem;
 }
-
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-black);
+}
 main {
   min-height: 100vh;
   display: grid;
@@ -85,21 +88,19 @@ main {
 }
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--clr-black);
 }
 
 .modal-main {
   position: fixed;
-  background: white;
+  background: var(--clr-white);
   width: 80%;
   height: auto;
   top: 50%;
   left: 50%;
-  padding: 20px;
+  padding: 1.5rem;
   transform: translate(-50%, -50%);
 }
 
@@ -113,28 +114,40 @@ main {
 
 input[type="text"] {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-family: var(--ff-primary);
 }
 
 /* Set a style for all buttons */
 button {
-  background-color: var(--clr-primary-1);
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  border: 2px solid var(--clr-black);
   cursor: pointer;
-  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+  width: 20rem;
+  margin-top: 1rem;
 }
 
 /* Add a hover effect for buttons */
 button:hover {
-  opacity: 0.5;
+  color: var(--clr-white);
+  background: var(--clr-black);
 }
+
 select {
   width: 100%;
   padding: 12px 20px;
@@ -146,6 +159,12 @@ select {
   font-size: 1rem;
 }
 
+.left-btn {
+  float: left;
+}
+.right-btn {
+  float: right;
+}
 .checkBoxLabel {
   padding-left: 10px;
 }

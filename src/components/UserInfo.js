@@ -26,6 +26,7 @@ const UserInfo = (props) => (
       onClick={props.handleNext}
       onChange={props.handleUserName}
       value={props.userName}
+      className="right-btn"
     />
   </div>
 );

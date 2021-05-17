@@ -81,8 +81,12 @@ const FavoritesModal = (props) => (
     />
     <CheckBoxes onChange={props.handleSetColors} setColors={props.setColors} />
     <ErrorMessage message={props.errorMessage} />
-    <Button title={"Next"} onClick={props.handleNext} />
-    <Button title={"Previous"} onClick={props.handlePrevious} />
+    <Button
+      title={"Previous"}
+      onClick={props.handlePrevious}
+      className="left-btn"
+    />
+    <Button title={"Next"} onClick={props.handleNext} className="right-btn" />
   </div>
 );
 

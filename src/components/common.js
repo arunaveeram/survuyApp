@@ -11,8 +11,8 @@ const Input = (props) => (
   </div>
 );
 
-const Button = ({ onClick, title }) => (
-  <button type="button" onClick={onClick}>
+const Button = ({ onClick, title, className }) => (
+  <button type="button" onClick={onClick} className={className}>
     {title}
   </button>
 );

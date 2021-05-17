@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Modal from "./components/Modal";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      show: false,
+      message: "Loading Survey .....",
+    };
+  }
+  componentDidMount() {
+    this.timerHandle = setTimeout(() => {
+      this.setState({ show: true });
+    }, 2000);
+  }
+
+  componentWillUnmount() {
+    if (this.timerHandle) {
+      clearTimeout(this.timerHandle);
+      this.timerHandle = 0;
+    }
+  }
+  toggleModel = () => {
+    this.setState({ show: false, message: "Thanks for taking survey!" });
+  };
+
+  render() {
+    return (
+      <main>
+        <h1> {this.state.message}</h1>
+        <Modal
+          show={this.state.show}
+          level={this.state.level}
+          closeModal={this.toggleModel}
+        />
+      </main>
+    );
+  }
 }
 
 export default App;
